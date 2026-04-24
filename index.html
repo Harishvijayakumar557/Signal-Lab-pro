@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signal Lab Pro v4.5 | Master CRO</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <h2>SIGNAL LAB PRO</h2>
+
+    <div class="section-title ch1-label">▶ CHANNEL 1 (CYAN)</div>
+    <select id="waveType">
+      <option value="sine">Sine</option>
+      <option value="square">Square</option>
+      <option value="triangle">Triangle</option>
+    </select>
+    <label>Amplitude: <span id="ampVal">5</span>V</label>
+    <input type="range" id="ampSlider" min="1" max="10" step="0.5" value="5">
+    <label>Y-Pos: <span id="ch1PosVal">-60</span></label>
+    <input type="range" id="ch1PosSlider" min="-150" max="150" value="-60">
+    <label>X-Offset: <span id="ch1XVal">0</span></label>
+    <input type="range" id="ch1XSlider" min="-200" max="200" value="0">
+
+    <div class="section-title ch2-label">▶ CHANNEL 2 (YELLOW)</div>
+    <div class="toggle-row">
+      <span>Enable CH2</span>
+      <label class="toggle"><input type="checkbox" id="ch2Enable"><span class="toggle-slider"></span></label>
+    </div>
+    <select id="ch2WaveType">
+      <option value="sine">Sine</option>
+      <option value="square">Square</option>
+    </select>
+    <label>Amplitude: <span id="ch2AmpVal">3</span>V</label>
+    <input type="range" id="ch2AmpSlider" min="1" max="10" step="0.5" value="3">
+    <label>Y-Pos: <span id="ch2PosVal">0</span></label>
+    <input type="range" id="ch2PosSlider" min="-150" max="150" value="0">
+
+    <div class="section-title mic-label">▶ VOICE & RECORD</div>
+    <div class="toggle-row">
+      <span>Live Mic</span>
+      <label class="toggle"><input type="checkbox" id="micEnable"><span class="toggle-slider"></span></label>
+    </div>
+    <label>Mic Y-Pos: <span id="micPosVal">60</span></label>
+    <input type="range" id="micPosSlider" min="-150" max="150" value="60">
+    
+    <button id="recordBtn" class="record-btn">● RECORD</button>
+    <div style="display:flex; gap:5px;">
+        <button id="playRecordBtn" class="record-btn" style="border-color:#00ffcc; color:#00ffcc;">PLAY</button>
+        <button id="clearRecordBtn" class="record-btn" style="border-color:#666; color:#888;">CLEAR</button>
+    </div>
+    <div id="recordStatus" class="record-info">READY</div>
+
+    <div class="section-title">▶ MASTER CONTROLS</div>
+    <label>Timebase (Speed): <span id="speedVal">5</span>ms</label>
+    <input type="range" id="speedSlider" min="1" max="20" value="5">
+    <button id="playBtn" style="margin-top:15px; width:100%; background:#00ffcc; color:#000; border:none; padding:10px; font-family:'Orbitron'; font-weight:bold; cursor:pointer;">⏸ PAUSE SCREEN</button>
+  </div>
+
+  <div class="graph-area">
+    <div class="screen-wrap" id="screenWrap">
+      <canvas id="graph"></canvas>
+      <div id="configOverlay" class="config-overlay"></div>
+      <div class="unit-tag top-left">V-SCALE: 5V/div</div>
+      <div class="unit-tag bottom-right" id="timeTag">T-SCALE: 5ms/div</div>
+    </div>
+    <div class="fft-wrap">
+      <canvas id="fftCanvas"></canvas>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

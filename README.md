@@ -31,4 +31,4 @@ An advanced, interactive **Signal Visualization & Audio Processing Suite**. This
 
 👨‍💻 Developer
 Harish Vijayakumar
-eclectronics learner
+-electronics learner

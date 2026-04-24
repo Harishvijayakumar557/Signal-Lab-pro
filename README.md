@@ -6,7 +6,7 @@ An advanced, interactive **Signal Visualization & Audio Processing Suite**. This
 [Explore Signal Lab Pro Live →](https://signal-lab-pro.vercel.app)
 
 📸 screenshot
-![demo image](Screenshot 2026-04-24 134132.png)
+![signal lab demo](https://github.com/Harishvijayakumar557/Signal-Lab-pro/blob/c253b20f5e40e50b67e9064b875d1fe64485d345/Screenshot%202026-04-24%20134132.png)
 
 💎 Key Features & Highlights
 
